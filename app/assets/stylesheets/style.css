@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+}
+
+.main_container {
+  background-color: #ffff;
+  width: calc(100vw - 250px);
+}
+
+.left_side_bar {
+  background-color: blue;
+  width: 250px;
+  height: 100vh;
+}
+
+.parsonal-container {
+  background-color: aqua;
+  border-top: 3px solid #ccc;
+}
+
+.user_name {
+  background-color: beige;
+  font-size: 20px ;
+  padding: 5px 0px 5px 10px;
+}
+
+p {
+  padding: 5px 0px 5px 5px;
+}
+
+.photo-container {
+  background-color: aliceblue;
+}
+
+.created_at {
+  background-color: blanchedalmond;
+  color: #D3D3D3;
+}
