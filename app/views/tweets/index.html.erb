@@ -5,41 +5,7 @@
   </div>
   <div class="main_container">
   <% @tweets.each do |tweet| %>
-    <div class="parsonal-container">
-<%# ツイートの上部分 %>
-      <div class="tweet-header">
-        <div class="user_name">
-          <span class="name">投稿者：<%= tweet.user.nickname %></span>
-        </div>
-        <div class="more">
-          <ul class="more_list">
-            <li>
-              <%= link_to '詳細', tweet_path(tweet.id), methid: :get %>
-            </li>
-            <% if user_signed_in? && current_user.id == tweet.user_id %>
-              <li>
-                <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
-              </li>
-              <li>
-                <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-<%# ツイートの内容部分 %>
-      <div class="tweet-content">
-        <p><%= tweet.text %></p>
-        <div class="photo_container">
-          <div class="photo_material" style="background-image: url(<%= tweet.image %>);">
-          </div>
-        </div>
-      </div>
-<%# ツイートの下部分 %>
-      <div class="tweet-footer">
-        <div class="created_at"><%= tweet.created_at %></div>
-      </div>
-    </div>
+    <%= render partial: "tweet", locals: {tweet: tweet} %>
   <% end %>
   </div>
 </div>
