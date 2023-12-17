@@ -29,6 +29,26 @@
           </div>
         </div>
       </div>
+<%#コメント投稿用フォーム%>
+      <div class="container">
+        <% if user_signed_in? %>
+          <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+            <%= current_user.nickname %>
+            <%= form.text_area :text, placeholder: "コメント", rows: "2" %>
+            <%= form.submit "送信" %>
+          <% end %>
+        <% else %>
+          <strong><p>※※※ コメント投稿は新規登録/ログインが必要 ※※※</p></strong>
+        <% end %>
+      </div>
+<%#コメント表示欄%>
+      <div class="comments">
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %></strong>
+          <%= comment.text %>
+          </p>
+        <% end %>
 <%# ツイートの下部分 %>
       <div class="tweet-footer">
         <div class="created_at"><%= @tweet.created_at %></div>
