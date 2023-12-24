@@ -1,7 +1,16 @@
+<% if user_signed_in? %>
 <div class="side-bar-header">
-
+  <div class="header-nickname">
+    <a><%= current_user.nickname %></a>
+  </div>
+  <div class="create-tweet">
+    <%= link_to "新規投稿", new_tweet_path, class: "post" %>
+  </div>
 </div>
 
 <div class="rooms">
-  
+
 </div>
+<% else %>
+<div class="not_signed_in_side-bar-header"></div>
+<% end %>

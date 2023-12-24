@@ -9,29 +9,50 @@
 }
 /* _side_bar.html.erb */
 .side-bar-header{
-  height: 100px;
+  height: 70px;
   padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #253141;
+  align-items: center;
 }
+
+.header-nickname a{
+  font-size: 16px;
+  color: #FAFAFA;
+  text-decoration: none;
+}
+
+.create-tweet a{
+  font-size: 10px;
+  color: deepskyblue;
+  border: 1px solid lightblue;
+  padding: 14px;
+  text-decoration: none;
+}
+
 
 .rooms{
   background-color: #2F3E51;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   padding: 0 20px;
 }
+
 
 .main-window{
   background-color: #FFFFFF;
   width: calc(100vw - 300px);
 }
+
 /* _main_window.html.erb */
 .main-window-header{
-  height: 100px;
+  height: 70px;
   padding: 0 40px;
 }
 
 .messages{
   background-color: #FAFAFA;
-  height: calc(100vh - 100px - 90px);
+  height: calc(100vh - 70px - 90px);
   padding: 46px 40px 0;
 }
 
@@ -46,8 +67,10 @@
 
 
 
+
+
 .container {
-  display: flex;
+  display: block;
 }
 
 .main_container {
@@ -58,7 +81,7 @@
 .left_side_bar {
   background-color: blue;
   width: 250px;
-  height: 100vh;
+  height: 100px;
 }
 
 .parsonal-container {
