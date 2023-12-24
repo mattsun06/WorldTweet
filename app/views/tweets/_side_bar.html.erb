@@ -8,9 +8,26 @@
   </div>
 </div>
 
-<div class="rooms">
-
+<div class="user_nav">
+  <ul class="user_info">
+    <li><%= link_to "マイページ", "/users/#{current_user.id}"%></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  </ul>
 </div>
 <% else %>
-<div class="not_signed_in_side-bar-header"></div>
+<div class="side-bar-header">
+  <div class="header-nickname">
+    <%= link_to "ログイン", new_user_session_path, method: :get %>
+  </div>
+  <div class="create-tweet">
+    <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+  </div>
+</div>
+
+<div class="user_nav">
+  <ul class="user_info">
+    <li></li>
+    <li></li>
+  </ul>
+</div>
 <% end %>

@@ -32,10 +32,20 @@
 }
 
 
-.rooms{
+.user_nav{
   background-color: #2F3E51;
   height: calc(100vh - 70px);
   padding: 0 20px;
+  text-align: center;
+}
+
+.user_info li{
+  padding-top: 15px;
+}
+.user_info a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #FAFAFA;
 }
 
 
