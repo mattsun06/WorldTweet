@@ -14,10 +14,15 @@
  *= require_self
  */
 
-
+*{
+  box-sizing: border-box;
+}
 
  header {
   background-color: #ccc;
+}
+
+
 }
 
 footer {
