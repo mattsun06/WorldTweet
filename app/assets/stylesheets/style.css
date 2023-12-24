@@ -62,6 +62,24 @@
   padding: 20px 40px;
 }
 
+.search-form{
+  display: flex;
+}
+
+.search-input{
+  height: 45px;
+  width: calc(100vw - 600px);
+  padding-left: 10px;
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+.search-btn{
+  height: 45px;
+  width: 7%;
+  margin: 12px 0 0 5px;
+  font-size: 20px;
+}
 
 
 
