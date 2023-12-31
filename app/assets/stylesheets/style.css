@@ -13,7 +13,7 @@
   padding: 0 20px;
   display: flex;
   justify-content: space-around;
-  background-color: #253141;
+  background-color: #003a0d;
   align-items: center;
 }
 
@@ -25,15 +25,15 @@
 
 .create-tweet a{
   font-size: 10px;
-  color: deepskyblue;
-  border: 1px solid lightblue;
+  color: rgb(120, 236, 143);
+  border: 1px solid rgb(193, 246, 204);
   padding: 14px;
   text-decoration: none;
 }
 
 
 .user_nav{
-  background-color: #2F3E51;
+  background-color: #2a9731;
   height: calc(100vh - 70px);
   padding: 0 20px;
   text-align: center;
@@ -58,6 +58,7 @@
 .main-window-header{
   height: 70px;
   padding: 0 40px;
+  background-color: #003a0d;
 }
 
 .messages{
