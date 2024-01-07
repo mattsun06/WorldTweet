@@ -6,9 +6,11 @@
 </div>
 
 <div class="messages">
-
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweet", locals: {tweet: tweet} %>
+  <% end %>
 </div>
 
 <div class="form">
-  
+  <p>&copy; WorldTweet 2023.</p>
 </div>

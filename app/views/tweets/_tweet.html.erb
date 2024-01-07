@@ -2,12 +2,12 @@
 <%# ツイートの上部分 %>
   <div class="tweet-header">
     <div class="user_name">
-      <span class="name">投稿者：<%= tweet.user.nickname %></span>
+      <span class="name"><%= tweet.user.nickname %></span>
     </div>
     <div class="more">
       <ul class="more_list">
         <li>
-          <%= link_to '詳細', tweet_path(tweet.id), methid: :get %>
+          <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
         </li>
         <% if user_signed_in? && current_user.id == tweet.user_id %>
           <li>
@@ -21,12 +21,12 @@
     </div>
   </div>
 <%# ツイートの内容部分 %>
-  <div class="tweet-content">
+  <a class="tweet-content" href="/tweets/#{tweet.id}">
     <p><%= tweet.text %></p>
     <div class="photo_container">
       <div class="photo_material" style="background-image: url(<%= tweet.image %>);">
       </div>
-    </div>
+    </a>
   </div>
 <%# ツイートの下部分 %>
   <div class="tweet-footer">
